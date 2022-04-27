@@ -15,6 +15,12 @@ Cross platform clipboard for handling copy/paste jpg in python
 This libray is meant to do only one thing and one thing well: copy jpg's to and from the
 system clipboard.
 
+## Install
+
+```
+python -m pip install pyjpgclipboard
+```
+
 ## Api
 
 ```
