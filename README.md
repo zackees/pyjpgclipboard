@@ -35,11 +35,10 @@ Probably not. Unless it's *really* important.
 
 We only support jpg images (and not any other formats or text) because manipulating the system
 clipboard across different platforms is **Hard**. As of the creation of this repo there really
-isn't any library that allows users to copy / paste images. There are a lot of libraries that
-allow cross platform posting of text and binary data, but none that have native support for jpgs.
-
-So this library is intended to fill in that gap. Libraries like `pyclip` should, in the future,
-use `pyjpgclipboard` to handle the missing jpeg clipboard manipulation.
+isn't any library that allows users to copy / paste jpegs. There are a lot of libraries that
+allow cross platform posting of text and binary data. So this library is intended to fill in that
+gap. Libraries like `pyclip` should, in the future, use `pyjpgclipboard` to handle the missing jpg
+clipboard manipulation.
 
 ## What motivatated this library?
 
@@ -53,4 +52,4 @@ an image as part of your test suite (hence the motivation to create this library
 
 There is only one system clipboard. So running this library in different threads/processes will
 result in collisions. It's up to the application running this library to provide any necessary
-locking mechanism, if needed.
+locking mechanism.
