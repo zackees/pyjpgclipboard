@@ -6,6 +6,8 @@
 [![Actions Status](https://github.com/zackees/pyjpgclipboard/workflows/Win_Tests/badge.svg)](https://github.com/zackees/pyjpgclipboard/actions/workflows/test_win.yml)
 [![Actions Status](https://github.com/zackees/pyjpgclipboard/workflows/Ubuntu_Tests/badge.svg)](https://github.com/zackees/pyjpgclipboard/actions/workflows/test_ubuntu.yml)
 
+Note: Ubuntu/Linux is not implemented yet. Feel free to submit a pull request!
+
 ## Brief
 
 Cross platform clipboard for handling copy/paste jpg in python

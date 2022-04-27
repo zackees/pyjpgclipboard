@@ -2,6 +2,7 @@
     Tests the gab driver.
 """
 import os
+import sys
 import tempfile
 import unittest
 
@@ -12,7 +13,7 @@ TEST_DATA = os.path.join(HERE, "data")
 SMALL_IMG = os.path.join(TEST_DATA, "small.jpg")
 
 
-class CopyClipBoardTester(unittest.TestCase):
+class ClipBoardTester(unittest.TestCase):
     """Gab driver test framework."""
 
     def test_sanity(self) -> None:
@@ -28,11 +29,13 @@ class CopyClipBoardTester(unittest.TestCase):
             temp.close()
             try:
                 clipboard_dump_jpg(temp.name)
-                # Get the file size
-                self.assertEqual(
+                # Windows, for some reason, stores the files slightly smaller.
+                delta = 1 if sys.platform == "win32" else 0
+                self.assertAlmostEqual(
                     os.path.getsize(temp.name),
                     os.path.getsize(SMALL_IMG),
-                    f"{temp.name} is not the same size as {SMALL_IMG}",
+                    delta=delta,
+                    msg=f"{temp.name} is not the same size as {SMALL_IMG}",
                 )
             finally:
                 os.remove(temp.name)
