@@ -6,7 +6,7 @@
 [![Actions Status](https://github.com/zackees/pyjpgclipboard/workflows/Win_Tests/badge.svg)](https://github.com/zackees/pyjpgclipboard/actions/workflows/test_win.yml)
 [![Actions Status](https://github.com/zackees/pyjpgclipboard/workflows/Ubuntu_Tests/badge.svg)](https://github.com/zackees/pyjpgclipboard/actions/workflows/test_ubuntu.yml)
 
-Note: Ubuntu/Linux is not implemented yet. Feel free to submit a pull request!
+Note: Ubuntu/Linux is not implemented yet. The implementation should use `xclip`, preferably with binaries downloaded in another python package so that the user doesn't need to first install `xclip` from the apt package repository. Feel free to submit a pull request!
 
 ## Brief
 
