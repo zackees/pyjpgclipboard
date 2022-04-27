@@ -5,7 +5,7 @@ import os
 import tempfile
 import unittest
 
-from pyjpgclipboard import clipboard_get_jpg, clipboard_store_jpg
+from pyjpgclipboard import clipboard_dump_jpg, clipboard_load_jpg
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TEST_DATA = os.path.join(HERE, "data")
@@ -21,13 +21,13 @@ class CopyClipBoardTester(unittest.TestCase):
 
     def test_small_image_copy(self) -> None:
         """Tests that gab_post works"""
-        clipboard_store_jpg(SMALL_IMG)
+        clipboard_load_jpg(SMALL_IMG)
         # Create a temporary file in the system temp directory,
         # then test that the sizes are the same.
         with tempfile.NamedTemporaryFile(delete=False) as temp:
             temp.close()
             try:
-                clipboard_get_jpg(temp.name)
+                clipboard_dump_jpg(temp.name)
                 # Get the file size
                 self.assertEqual(
                     os.path.getsize(temp.name),

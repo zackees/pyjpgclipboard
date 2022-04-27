@@ -6,7 +6,7 @@
 import subprocess
 
 
-def clipboard_store_jpg_darwin(jpeg_path: str) -> None:
+def clipboard_load_jpg_darwin(jpeg_path: str) -> None:
     """Copies the image at the given path into the system clipboard."""
     subprocess.run(
         [
@@ -18,7 +18,7 @@ def clipboard_store_jpg_darwin(jpeg_path: str) -> None:
     )
 
 
-def clipboard_get_jpg_darwin(jpeg_path: str) -> None:
+def clipboard_dump_jpg_darwin(jpeg_path: str) -> None:
     """Copies the image at the given path into the system clipboard."""
     commands = [
         "osascript",

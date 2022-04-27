@@ -7,9 +7,8 @@
 
 import sys
 
-
 if sys.platform == "darwin":
-    from .clipboard_darwin import clipboard_store_jpg_darwin as clipboard_store_jpg
-    from .clipboard_darwin import clipboard_get_jpg_darwin as clipboard_get_jpg
+    from .clipboard_darwin import clipboard_dump_jpg_darwin as clipboard_dump_jpg
+    from .clipboard_darwin import clipboard_load_jpg_darwin as clipboard_load_jpg
 else:
     raise NotImplementedError(f"Unsupported platform: {sys.platform}")
