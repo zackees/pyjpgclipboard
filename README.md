@@ -59,3 +59,9 @@ an image as part of your test suite (hence the motivation to create this library
 There is only one system clipboard. So running this library in different threads/processes will
 result in collisions. It's up to the application running this library to provide any necessary
 locking mechanism.
+
+## Versions
+
+  * 1.0.2: Now installs on linux. Before it would error. But not all codepaths that include this library will actually use it.
+  * 1.0.1: Bug fix
+  * 1.0.0: Release.
