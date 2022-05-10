@@ -7,15 +7,6 @@
 [![Actions Status](https://github.com/zackees/pyjpgclipboard/workflows/Ubuntu_Tests/badge.svg)](https://github.com/zackees/pyjpgclipboard/actions/workflows/test_ubuntu.yml)
 
 
-### Ubuntu/Linux is implementation
-
-The ubuntu lib uses `xclip`, which  means that you'll need an x-server running. If you are using a headless display then please install a null x-server.
-
-```
-export DISPLAY=:0
-sudo Xvfb -ac :0 -screen 0 1280x1024x24 > /dev/null 2>&1 &
-sudo apt-get install xclip
-```
 
 ## Brief
 
@@ -29,6 +20,22 @@ system clipboard.
 ```
 python -m pip install pyjpgclipboard
 ```
+
+### Ubuntu/Linux
+
+The ubuntu lib uses `xclip`
+
+```
+sudo apt-get install xclip
+```
+
+If you are running in a headless display you'll need a dummy x-server running to use xclip. Please install it using this:
+
+```
+export DISPLAY=:0
+sudo Xvfb -ac :0 -screen 0 1280x1024x24 > /dev/null 2>&1 &
+```
+
 
 ## Api
 
