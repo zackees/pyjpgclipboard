@@ -1,5 +1,5 @@
 """
-    Tests the gab driver.
+    Tests the clipboard copy/paste function.
 """
 import os
 import sys
@@ -14,14 +14,14 @@ SMALL_IMG = os.path.join(TEST_DATA, "small.jpg")
 
 
 class ClipBoardTester(unittest.TestCase):
-    """Gab driver test framework."""
+    """Tester for the clipboard."""
 
     def test_sanity(self) -> None:
         """Test that image assets are in their proper place"""
         self.assertTrue(os.path.exists(SMALL_IMG))
 
     def test_small_image_copy(self) -> None:
-        """Tests that gab_post works"""
+        """Tests that a small image can by copied and then pasted"""
         clipboard_load_jpg(SMALL_IMG)
         # Create a temporary file in the system temp directory,
         # then test that the sizes are the same.

@@ -13,6 +13,9 @@ if sys.platform == "darwin":
 elif sys.platform == "win32":
     from .clipboard_win32 import clipboard_dump_jpg_win32 as clipboard_dump_jpg
     from .clipboard_win32 import clipboard_load_jpg_win32 as clipboard_load_jpg
+elif sys.platform == "linux":
+    from .clipboard_linux import clipboard_dump_jpg_linux as clipboard_dump_jpg
+    from .clipboard_linux import clipboard_load_jpg_linux as clipboard_load_jpg
 else:
     print(f"{__file__}: Unsupported platform: {sys.platform}, using stubbed versions.")
 
