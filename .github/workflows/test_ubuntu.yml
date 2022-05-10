@@ -24,7 +24,10 @@ jobs:
           ${{ runner.os }}-pip-
     - name: Install dependencies
       run: |
-        pip install -e '.[test]' && sudo apt-get install xclip
+        pip install -e '.[test]'
+        export DISPLAY=:99
+        sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 &
+        sudo apt-get install xclip
     - name: Run tests
       run: |
         pytest --ignore-glob=**/archive/**
