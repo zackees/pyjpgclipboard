@@ -78,6 +78,7 @@ locking mechanism.
 
 ## Versions
 
+  * 1.0.3: Ubuntu implemented and tested to work on headless display
   * 1.0.2: Now installs on linux. Before it would error. But not all codepaths that include this library will actually use it.
   * 1.0.1: Bug fix
   * 1.0.0: Release.
