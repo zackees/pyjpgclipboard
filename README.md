@@ -6,7 +6,16 @@
 [![Actions Status](https://github.com/zackees/pyjpgclipboard/workflows/Win_Tests/badge.svg)](https://github.com/zackees/pyjpgclipboard/actions/workflows/test_win.yml)
 [![Actions Status](https://github.com/zackees/pyjpgclipboard/workflows/Ubuntu_Tests/badge.svg)](https://github.com/zackees/pyjpgclipboard/actions/workflows/test_ubuntu.yml)
 
-Note: Ubuntu/Linux is not implemented yet. The implementation should use `xclip`, preferably with binaries downloaded in another python package so that the user doesn't need to first install `xclip` from the apt package repository. Feel free to submit a pull request!
+
+### Ubuntu/Linux is implementation
+
+The ubuntu lib uses `xclip`, which  means that you'll need an x-server running. If you are using a headless display then please install a null x-server.
+
+```
+export DISPLAY=:0
+sudo Xvfb -ac :0 -screen 0 1280x1024x24 > /dev/null 2>&1 &
+sudo apt-get install xclip
+```
 
 ## Brief
 
